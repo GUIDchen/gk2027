@@ -12,7 +12,10 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CONFIG_PATH = ROOT / "gk2027_config.json"
+# 配置文件优先根目录；若使用“个人使用/”分包，则读个人目录里的配置
+_ROOT_CONFIG = ROOT / "gk2027_config.json"
+_PERSONAL_CONFIG = ROOT / "个人使用" / "gk2027_config.json"
+CONFIG_PATH = _ROOT_CONFIG if _ROOT_CONFIG.exists() else (_PERSONAL_CONFIG if _PERSONAL_CONFIG.exists() else _ROOT_CONFIG)
 
 
 def load_config() -> dict:

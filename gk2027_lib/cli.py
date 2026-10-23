@@ -105,7 +105,7 @@ def cmd_init(args):
 
 def cmd_download(args):
     banner('下载官方资料')
-    out = Path(args.out).expanduser() if getattr(args, 'out', None) else (ROOT / '2027国考资料')
+    out = Path(args.out).expanduser() if getattr(args, 'out', None) else P('official_xls').parent.parent
     log(f'输出目录：{out}')
     log('将下载：招考公告/大纲、政策法规、常见问题、相关附件、岗位表。')
     if not ask_yes('开始下载？', True):
