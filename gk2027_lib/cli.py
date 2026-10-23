@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 from . import downloader, excel_build, excel_snapshot, fetch, stats_report
-from .util import CFG, CONFIG_PATH, P, ROOT, ChromeError, ask, ask_yes, backup, banner, check_chrome, chrome_js, chrome_tabs, fmt_int, log, sha256
+from .util import CFG, CONFIG_PATH, P, ROOT, ChromeError, ask, ask_yes, backup, banner, check_chrome, chrome_js, chrome_tabs, fmt_int, load_config, log, sha256
 
 
 def _default_label() -> str:
@@ -34,7 +34,7 @@ def _reload_profile():
     """init 后让同进程内的 matcher/excel_build 用上新配置（菜单连续操作时需要）。"""
     import importlib
     from . import util, matcher, excel_build
-    util.CFG = json.load(open(CONFIG_PATH, encoding='utf-8'))
+    util.CFG = load_config()
     global CFG
     CFG = util.CFG
     importlib.reload(matcher)
@@ -43,7 +43,7 @@ def _reload_profile():
 
 def cmd_init(args):
     banner('设置本人条件')
-    cfg = json.load(open(CONFIG_PATH, encoding='utf-8'))
+    cfg = load_config()
     p = cfg.get('profile', {})
     from_json = getattr(args, 'from_json', None)
     if from_json:

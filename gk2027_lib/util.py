@@ -19,7 +19,9 @@ CONFIG_PATH = _ROOT_CONFIG if _ROOT_CONFIG.exists() else (_PERSONAL_CONFIG if _P
 
 
 def load_config() -> dict:
-    with open(CONFIG_PATH, encoding="utf-8") as f:
+    # 新克隆的仓库没有 gk2027_config.json，先读脱敏示例；init 会写正式配置
+    path = CONFIG_PATH if CONFIG_PATH.exists() else (ROOT / "gk2027_config.example.json")
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 
