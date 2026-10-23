@@ -1,0 +1,29 @@
+# 虚拟环境与缓存
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# 个人配置、截图、备份
+gk2027_config.json
+gk2027_config.personal.json
+考生基本信息.png
+*.bak-*
+
+# 数据包与抓取数据（用 download/fetch 生成）
+2027国考资料/
+data/
+
+# 根目录旧数据文件（避免重复/大文件）
+/*.xls
+/*.zip
+/*.doc
+/*.docx
+/*.pdf
+/*.png
+
+# 日志
+*.log

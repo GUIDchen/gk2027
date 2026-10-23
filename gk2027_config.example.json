@@ -1,0 +1,67 @@
+{
+  "official_xls": "2027国考资料/05_岗位表/中央机关及其直属机构2027年度考试录用公务员招考简章.xls",
+  "workbook": "2027国考资料/06_个人筛选/中央机关及其直属机构2027年度考试录用公务员招考简章_按本人条件筛选.xls",
+  "stats_xls": "2027国考资料/06_个人筛选/2027国考_符合条件岗位_报名人数统计.xls",
+  "counts_dir": "data/counts",
+  "regions": [
+    "陕西",
+    "甘肃",
+    "西安"
+  ],
+  "profile": {
+    "gender": "男",
+    "age": 30,
+    "party": "中共党员",
+    "education": "硕士研究生",
+    "education_level": "硕士",
+    "degree": "硕士",
+    "degree_level": "硕士",
+    "major_code": "085404",
+    "major_name": "计算机技术",
+    "major_codes": [
+      "085404"
+    ],
+    "major_keywords": [
+      "计算机",
+      "软件工程"
+    ],
+    "academic_equiv": [
+      "0812",
+      "0835"
+    ],
+    "broad_keywords": [
+      "计算机",
+      "电子信息",
+      "0854",
+      "0812",
+      "0809",
+      "0775",
+      "人工智能",
+      "数据科学",
+      "网络空间安全",
+      "电子科学与技术",
+      "信息与通信工程"
+    ],
+    "bachelor_major": "计算机科学与技术",
+    "grassroots_years": 0,
+    "work_years": 0,
+    "service_project": "",
+    "cet4": 425,
+    "cet6": false,
+    "cet6_score": 0,
+    "ielts": 0,
+    "toefl": 0,
+    "household_province": "甘肃",
+    "household_city": "兰州",
+    "household_county": "城关",
+    "fresh_label": "2027届",
+    "certificates": [],
+    "is_veteran": false,
+    "is_disabled": false,
+    "is_minority": false,
+    "is_athlete": false,
+    "discipline": "工学"
+  },
+  "hb01_id": "8a81f6eca0221f1401a0242759fc0000",
+  "site": "http://bm.scs.gov.cn/kl2027"
+}
